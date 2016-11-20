@@ -21,10 +21,16 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/geehrc/overlay
 
-#LOCAL_KERNEL := device/lge/geehrc/kernel
+#kernel Path
 
-#PRODUCT_COPY_FILES := \
-#    $(LOCAL_KERNEL):kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+
+LOCAL_KERNEL := device/lge/geehrc/kernel
+
+endif
+
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so

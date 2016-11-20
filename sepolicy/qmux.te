@@ -19,5 +19,5 @@ allow qmux sysfs:file write;
 # wake lock access
 wakelock_use(qmux)
 
-allow radio system_file:file execmod;
+#allow radio system_file:file execmod;
 allow qmux sysfs_smdcntl_open_timeout:file rw_file_perms;

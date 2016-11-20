@@ -29,11 +29,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 BOARD_GLOBAL_CFLAGS += -DMETADATA_CAMERA_SOURCE
 
-# Inline kernel
-KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
-TARGET_KERNEL_CONFIG := gee_defconfig	
-TARGET_KERNEL_SOURCE := kernel/lge/geehrc
-
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geehrc lpj=67677 user_debug=31 androidboot.selinux=permissive
